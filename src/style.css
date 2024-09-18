@@ -208,6 +208,7 @@ ul {
     }
   }
 }
+.resume-header,
 .skills-header,
 .about-header {
   display: flex;
@@ -270,6 +271,53 @@ ul {
         height: 5px;
         background-color: var(--clr-primary);
       }
+    }
+  }
+}
+#resume {
+  padding-bottom: 10rem;
+}
+.resume-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  justify-items:center;
+  .resume-history {
+    padding:1rem;
+    position: relative;
+    border-left: 2px solid var(--clr-primary);
+    line-height: 1.5rem;
+    &::before {
+      content: "";
+      position: absolute;
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      left: -9px;
+      top: 0;
+      background-color: var(--clr-primary);
+      border: 2px solid var(--clr-secondary);
+    }
+    .positionTitle {
+      padding-bottom: var(--pt-b-1);
+    }
+    .companyTitle {
+      span {
+        font-weight: 600;
+      }
+    }
+    .workTime {
+      span {
+        font-weight: 600;
+      }
+    }
+    .hotelsName-title {
+      span {
+        font-weight: 600;
+      }
+    }
+    .hotelsName {
+      padding-left: 2rem;
     }
   }
 }
