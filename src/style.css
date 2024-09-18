@@ -1,17 +1,23 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 
 :root {
   --clr-primary: #005f77;
   --clr-secondary: #00181e;
-  --pblock-:2rem;
+  --pblock-: 2rem;
   --pblock-4-: 4rem;
+  --transition: 0.6s;
 }
-h1, *, *::before, *::after {
+
+*,
+*::before,
+*::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-
+h1 {
+  margin: 0;
+}
 body {
   font-family: "Roboto", sans-serif;
 }
@@ -43,7 +49,7 @@ ul {
   }
 }
 
-.main-navigation{
+.main-navigation {
   position: sticky;
   top: 0;
   width: 100%;
@@ -85,10 +91,12 @@ ul {
       font-size: 1rem;
       font-weight: 500;
       color: var(--clr-primary);
-      &:hover, &:focus-visible {
+      &:hover,
+      &:focus-visible {
         outline: none;
         text-decoration: underline;
         color: var(--clr-secondary);
+        transition: var(--transition);
       }
     }
   }
@@ -101,11 +109,11 @@ ul {
     padding-block: var(--pblock-4-);
     .banner-logo {
       margin: 0 auto;
-      width: 50%;
+      width: 300px;
       border-radius: 50%;
     }
   }
-  .bannercontainer-info{
+  .bannercontainer-info {
     .banner-header {
       font-size: 2rem;
       padding-block: var(--pblock-);
@@ -120,11 +128,49 @@ ul {
         font-size: 2rem;
         i {
           color: var(--clr-secondary);
-          &:hover, &:focus-visible {
+          &:hover,
+          &:focus-visible {
             color: var(--clr-primary);
+            transition: var(--transition);
           }
         }
       }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .banner {
+    .banner-container {
+      grid-template-columns: repeat(1, 1fr);
+      .banner-logo { 
+        width: 200px;
+      }
+    }
+    .banner-header {
+      text-align: center;
+      font-size: 1rem !important;
+    }
+  }
+  .socialmedia-container {
+    .socialmedia-icons {
+      justify-content: center;
+    }
+  }
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+  .banner {
+    .banner-container {
+      grid-template-columns: repeat(1, 1fr);
+    }
+    .banner-header {
+      text-align: center;
+    }
+  }
+  .socialmedia-container {
+    .socialmedia-icons {
+      justify-content: center;
     }
   }
 }
