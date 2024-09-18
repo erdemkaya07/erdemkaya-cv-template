@@ -55,6 +55,7 @@ ul {
   padding-block: 0.6rem;
   background-color: transparent;
   border: 1px solid;
+  border-radius: .6em;
   cursor: pointer;
 }
 
@@ -122,6 +123,8 @@ ul {
 }
 
 .banner {
+  background: rgb(233,233,233);
+  background: linear-gradient(0deg, rgba(233,233,233,1) 0%, rgba(240,240,240,1) 53%, rgba(241,244,253,1) 100%);
   .banner-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -130,6 +133,15 @@ ul {
       margin: 0 auto;
       width: 300px;
       border-radius: 50%;
+    }
+    .bannercontainer-info {
+      display: flex;
+      flex-direction: column;
+      align-items: start;
+      justify-content: flex-start;
+      button {
+        width: 50%;
+      }
     }
   }
   .bannercontainer-info {
@@ -167,6 +179,13 @@ ul {
       .banner-logo {
         width: 200px;
       }
+      .bannercontainer-info {
+        align-items: center !important;
+        text-align: center;
+        button {
+          width: 80%;
+        }
+      }
     }
     .banner-header {
       text-align: center;
@@ -185,13 +204,18 @@ ul {
     .banner-container {
       grid-template-columns: repeat(1, 1fr);
     }
-    .banner-header {
-      text-align: center;
-    }
+
   }
   .socialmedia-container {
     .socialmedia-icons {
       justify-content: center;
+    }
+  }
+  .bannercontainer-info {
+    align-items: center !important;
+    text-align: center;
+    button {
+      width: 50%;
     }
   }
 }
