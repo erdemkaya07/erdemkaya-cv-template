@@ -107,6 +107,7 @@ ul {
   border-bottom: 1px solid var(--clr-primary);
   box-shadow: 0 5px 10px #83838330;
   background-color: #fff;
+  z-index: 1;
   .container {
     display: flex;
     align-items: center;
@@ -275,18 +276,19 @@ ul {
   }
 }
 #resume {
-  padding-bottom: 10rem;
+  padding-bottom: 2rem;
 }
 .resume-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 1rem;
-  justify-items:center;
+  /* justify-items:center; */
   .resume-history {
     padding:1rem;
     position: relative;
     border-left: 2px solid var(--clr-primary);
     line-height: 1.5rem;
+    margin-top: 2rem;
     &::before {
       content: "";
       position: absolute;
@@ -298,6 +300,7 @@ ul {
       background-color: var(--clr-primary);
       border: 2px solid var(--clr-secondary);
     }
+
     .positionTitle {
       padding-bottom: var(--pt-b-1);
     }
@@ -318,6 +321,17 @@ ul {
     }
     .hotelsName {
       padding-left: 2rem;
+    }
+  }
+  .resume-details {
+    position: relative;
+    .details-title {
+      border-bottom: 2px solid var(--clr-primary);
+      font-style: italic;
+      position: absolute;
+      top: 0;
+      left: 18px;
+
     }
   }
 }
@@ -355,7 +369,7 @@ ul {
     grid-template-columns: 1fr; 
   }
   .skills-header {
-    padding-top: 0;
+    padding-top: 1rem;
     .skillsheader-text {
       padding-top: 1rem;
     }
@@ -365,6 +379,9 @@ ul {
     .progress {
       width: 100%;
     }
+  }
+  .resume-grid { 
+    grid-template-columns: 1fr;
   }
 }
 
@@ -394,7 +411,7 @@ ul {
     grid-template-columns: 1fr; 
   }
   .skills-header {
-    padding-top: 0;
+    padding-top: 2rem;
     .skillsheader-text {
       padding-top: 1rem;
     }
@@ -404,5 +421,8 @@ ul {
     .progress {
       width: 100%;
     }
+  }
+  .resume-grid { 
+    grid-template-columns: 1fr;
   }
 }
