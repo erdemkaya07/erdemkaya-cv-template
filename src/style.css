@@ -397,7 +397,7 @@ ul {
 }
 
 footer {
-  background-color: var(--clr-primary);
+  background-color: #001a07;
   .footer {
     padding-block: var(--pt-b-2);
     text-align: center;
@@ -405,7 +405,7 @@ footer {
     span {
       font-weight: 800;
       font-style: italic;
-      color: #001a07;
+      color: #fff;
     }
   }
 }
