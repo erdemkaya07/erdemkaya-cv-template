@@ -443,6 +443,17 @@ ul {
   .resume-grid { 
     grid-template-columns: 1fr;
   }
+  .contact-form-grid {
+    grid-template-columns: 1fr !important;
+    .form-grid-right {
+      display: none !important;
+    }
+    .form-grid-left {
+      button {
+        width: 96%;
+      }
+    }
+  }
 }
 
 @media (min-width: 768px) and (max-width: 992px) {
@@ -484,5 +495,14 @@ ul {
   }
   .resume-grid { 
     grid-template-columns: 1fr;
+  }
+  .contact-form-grid {
+    grid-template-columns: 1fr !important;
+    .form-grid-right {
+      flex-direction: row !important;
+      padding-left: 0 !important;
+      justify-content: center;
+      padding-bottom: var(--pt-b-2);
+    }
   }
 }
